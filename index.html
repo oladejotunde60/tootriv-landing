@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TooTriv Financial Services — Salary Advance for Every Nigerian Worker</title>
+    <meta name="description" content="TooTriv offers instant, affordable salary-backed loans to Nigerian salaried employees via USSD, Web, and Mobile. Get up to ₦100,000 in under 5 minutes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            background: #fff;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ===== COLORS ===== */
+        :root {
+            --primary: #0A8754;
+            --primary-dark: #065F3B;
+            --primary-light: #E6F5EE;
+            --accent: #F7B32B;
+            --accent-dark: #D99B1E;
+            --dark: #1a1a2e;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #0A8754 0%, #065F3B 100%);
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 80px 0; }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--gray);
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all .25s ease;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--dark);
+        }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(247,179,43,.35); }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,.15); }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            font-size: 1.5rem; font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { font-size: .9rem; font-weight: 500; color: var(--dark); transition: color .2s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta {
+            background: var(--primary); color: #fff;
+            padding: 8px 20px; border-radius: 6px; font-size: .9rem; font-weight: 600;
+            transition: background .2s;
+        }
+        .nav-cta:hover { background: var(--primary-dark); }
+
+        /* Mobile hamburger */
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; transition: all .3s; }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: var(--gradient);
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 100px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: rgba(247,179,43,.12);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; bottom: -30%; left: -10%;
+            width: 400px; height: 400px;
+            background: rgba(255,255,255,.06);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            display: flex; align-items: center; gap: 60px;
+            position: relative; z-index: 1;
+        }
+        .hero-text { flex: 1; color: var(--white); }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,.15);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 .highlight { color: var(--accent); }
+        .hero p {
+            font-size: 1.15rem;
+            opacity: .9;
+            margin-bottom: 32px;
+            max-width: 520px;
+            line-height: 1.7;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-visual { flex: 1; display: flex; justify-content: center; }
+        .phone-mockup {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 16px;
+            box-shadow: 0 32px 64px rgba(0,0,0,.25);
+            width: 280px;
+            position: relative;
+        }
+        .phone-screen {
+            background: var(--dark);
+            border-radius: 18px;
+            padding: 24px 16px;
+            color: var(--white);
+            min-height: 440px;
+        }
+        .phone-header { text-align: center; margin-bottom: 24px; }
+        .phone-header .ussd-code { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .phone-header p { font-size: .75rem; opacity: .6; margin-top: 4px; }
+        .phone-menu-item {
+            padding: 12px 16px;
+            background: rgba(255,255,255,.08);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: .85rem;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .phone-menu-num {
+            background: var(--primary);
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: .75rem; font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: var(--white);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        .stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: .9rem; color: var(--gray); margin-top: 4px; }
+
+        /* ===== PROBLEM ===== */
+        .problem { background: var(--light-gray); }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .problem-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex; gap: 16px; align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+        }
+        .problem-icon {
+            width: 48px; height: 48px;
+            background: #FEE2E2;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+        .problem-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+        .problem-card p { font-size: .9rem; color: var(--gray); }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        .step-card { text-align: center; }
+        .step-num {
+            width: 56px; height: 56px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; font-weight: 800;
+            margin: 0 auto 16px;
+        }
+        .step-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+        .step-card p { font-size: .88rem; color: var(--gray); }
+
+        /* ===== FEATURES ===== */
+        .features { background: var(--light-gray); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,.04);
+            transition: transform .25s, box-shadow .25s;
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+        .feature-icon {
+            width: 64px; height: 64px;
+            background: var(--primary-light);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 16px;
+        }
+        .feature-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .feature-card p { font-size: .88rem; color: var(--gray); line-height: 1.6; }
+
+        /* ===== TECH STACK ===== */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .tech-card {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: background .2s;
+        }
+        .tech-card:hover { background: var(--primary-light); }
+        .tech-card .tech-emoji { font-size: 2rem; margin-bottom: 10px; }
+        .tech-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; }
+        .tech-card p { font-size: .8rem; color: var(--gray); }
+
+        /* ===== MARKET ===== */
+        .market { background: var(--light-gray); }
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .market-content h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+        .market-content p { font-size: .95rem; color: var(--gray); margin-bottom: 16px; line-height: 1.7; }
+        .market-stats { display: flex; flex-direction: column; gap: 16px; }
+        .market-stat {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: flex; align-items: center; gap: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+        }
+        .market-stat-icon {
+            width: 48px; height: 48px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; flex-shrink: 0;
+        }
+        .market-stat h4 { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+        .market-stat p { font-size: .85rem; color: var(--gray); }
+
+        /* ===== COMPETITIVE ===== */
+        .competitive-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,.06);
+        }
+        .competitive-table th,
+        .competitive-table td {
+            padding: 16px 20px;
+            text-align: left;
+            font-size: .9rem;
+        }
+        .competitive-table thead th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        .competitive-table tbody tr { background: var(--white); }
+        .competitive-table tbody tr:nth-child(even) { background: var(--light-gray); }
+        .competitive-table .highlight-row {
+            background: var(--primary-light) !important;
+            font-weight: 700;
+        }
+        .competitive-table .highlight-row td { color: var(--primary-dark); }
+
+        /* ===== CHANNELS ===== */
+        .channels { background: var(--light-gray); }
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .channel-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 36px 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,.04);
+        }
+        .channel-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        .channel-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .channel-card p { font-size: .88rem; color: var(--gray); line-height: 1.6; }
+        .channel-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+        .badge-live { background: #D1FAE5; color: #065F46; }
+        .badge-beta { background: #FEF3C7; color: #92400E; }
+        .badge-soon { background: #E0E7FF; color: #3730A3; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--gradient);
+            text-align: center;
+            padding: 80px 24px;
+        }
+        .cta-section h2 { font-size: 2.2rem; font-weight: 800; color: var(--white); margin-bottom: 16px; }
+        .cta-section p { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,.7);
+            padding: 60px 0 40px;
+        }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+        .footer-brand .logo { font-size: 1.6rem; }
+        .footer-brand p { font-size: .88rem; margin-top: 12px; line-height: 1.7; max-width: 300px; }
+        .footer-col h4 { color: var(--white); font-size: .9rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; font-size: .88rem; margin-bottom: 10px; transition: color .2s; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            text-align: center;
+            font-size: .82rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-inner { flex-direction: column; text-align: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .problem-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .market-grid { grid-template-columns: 1fr; }
+            .channels-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .section { padding: 56px 0; }
+            .section-title { font-size: 1.5rem; }
+            .hero { padding: 80px 0 48px; }
+            .hero h1 { font-size: 1.8rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: 1fr 1fr; }
+            .competitive-table { font-size: .78rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .phone-mockup { width: 240px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <div class="nav-inner">
+        <div class="logo">Too<span>Triv</span></div>
+        <div class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+            <a href="#technology">Technology</a>
+            <a href="#market">Market</a>
+            <a href="#contact" class="nav-cta">Contact Us</a>
+        </div>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex';" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <div class="hero-badge">🇳🇬 Built for Nigeria, Built for Africa</div>
+            <h1>Instant Salary Advances for <span class="highlight">Every Worker</span></h1>
+            <p>
+                TooTriv is a digital lending platform providing fast, affordable, collateral-free salary-backed loans.
+                Employees can access up to ₦100,000 in under 5 minutes — via USSD, Web, or Mobile.
+            </p>
+            <div class="hero-buttons">
+                <a href="#how-it-works" class="btn btn-primary">See How It Works</a>
+                <a href="#contact" class="btn btn-outline">Partner With Us</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-header">
+                        <div class="ussd-code">*384*12345#</div>
+                        <p>TooTriv PayDay Advance</p>
+                    </div>
+                    <div class="phone-menu-item">
+                        <span class="phone-menu-num">1</span>
+                        Apply for Loan
+                    </div>
+                    <div class="phone-menu-item">
+                        <span class="phone-menu-num">2</span>
+                        Check Eligibility
+                    </div>
+                    <div class="phone-menu-item">
+                        <span class="phone-menu-num">3</span>
+                        View Loan Status
+                    </div>
+                    <div class="phone-menu-item">
+                        <span class="phone-menu-num">4</span>
+                        Make Repayment
+                    </div>
+                    <div class="phone-menu-item">
+                        <span class="phone-menu-num">5</span>
+                        My Account
+                    </div>
+                    <div style="text-align:center; margin-top:20px;">
+                        <span style="background:var(--accent);color:var(--dark);padding:8px 24px;border-radius:20px;font-size:.8rem;font-weight:700;">Get up to ₦100,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">15M+</div>
+                <div class="stat-label">Salaried Workers in Nigeria</div>
+            </div>
+            <div>
+                <div class="stat-number">&lt; 5 min</div>
+                <div class="stat-label">Loan Disbursement Time</div>
+            </div>
+            <div>
+                <div class="stat-number">7-10%</div>
+                <div class="stat-label">Monthly Interest Rate</div>
+            </div>
+            <div>
+                <div class="stat-number">20%+</div>
+                <div class="stat-label">Market CAGR Growth</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section id="problem" class="section problem">
+    <div class="container">
+        <h2 class="section-title">The Problem We're Solving</h2>
+        <p class="section-subtitle">
+            Millions of Nigerian workers live paycheck to paycheck. When emergencies strike, they have nowhere to turn.
+        </p>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon">💸</div>
+                <div>
+                    <h4>Paycheck-to-Paycheck Living</h4>
+                    <p>Unforeseen expenses — medical bills, school fees, family emergencies — create urgent liquidity needs for salaried workers.</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🏦</div>
+                <div>
+                    <h4>Slow Bank Processes</h4>
+                    <p>Traditional banks offer slow, paperwork-heavy loan processes that can take weeks to approve even small amounts.</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🦈</div>
+                <div>
+                    <h4>Predatory Lending</h4>
+                    <p>Informal money lenders exploit workers with predatory interest rates of 15-30% per month, trapping them in cycles of debt.</p>
+                </div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">📵</div>
+                <div>
+                    <h4>Digital Divide</h4>
+                    <p>Many workers rely on basic feature phones. Existing digital lenders require smartphones and data, excluding the underbanked.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how-it-works" class="section">
+    <div class="container">
+        <h2 class="section-title">How TooTriv Works</h2>
+        <p class="section-subtitle">Get a salary advance in 4 simple steps — no collateral, no paperwork, no hidden fees.</p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h4>Register</h4>
+                <p>Sign up with your BVN via USSD, Web, or Mobile. We auto-verify your identity in seconds.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h4>Get Scored</h4>
+                <p>Our AI-powered credit engine assesses your salary history, employer rating, and credit profile instantly.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h4>Receive Funds</h4>
+                <p>Approved loans are disbursed directly to your bank account in under 5 minutes — 24/7.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h4>Auto-Repay</h4>
+                <p>Repayment is deducted automatically from your salary via direct debit mandate on payday.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features" class="section features">
+    <div class="container">
+        <h2 class="section-title">Why TooTriv?</h2>
+        <p class="section-subtitle">We combine the reliability of banks with the speed, flexibility, and convenience of digital-first fintech.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h4>Instant Disbursement</h4>
+                <p>Loans approved and disbursed in under 5 minutes, anytime, anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h4>Multi-Channel Access</h4>
+                <p>Apply via USSD (feature phones), web app, or mobile app — we meet customers where they are.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h4>AI Credit Scoring</h4>
+                <p>Proprietary scoring engine using salary history, BVN, credit bureaus, and employer data.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h4>Lower Interest Rates</h4>
+                <p>7-10% monthly — significantly lower than market competitors charging 15-30%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h4>Employer Partnerships</h4>
+                <p>We partner with companies to offer TooTriv as an employee benefit, reducing risk and improving access.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h4>Bank-Grade Security</h4>
+                <p>BVN validation, encrypted KYC, multi-factor authentication, and end-to-end encryption.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ACCESS CHANNELS ===== -->
+<section id="channels" class="section channels">
+    <div class="container">
+        <h2 class="section-title">Access Channels</h2>
+        <p class="section-subtitle">Financial inclusion means meeting every customer where they are — from feature phones to smartphones.</p>
+        <div class="channels-grid">
+            <div class="channel-card">
+                <div class="channel-icon">📞</div>
+                <h4>USSD</h4>
+                <p>Dial *384*12345# from any phone — no internet required. Perfect for the 70% of Nigerians without smartphones.</p>
+                <span class="channel-badge badge-live">Live</span>
+            </div>
+            <div class="channel-card">
+                <div class="channel-icon">🌐</div>
+                <h4>Web Application</h4>
+                <p>Full-featured responsive web portal built with React. Apply, manage loans, and view repayment schedules online.</p>
+                <span class="channel-badge badge-beta">Beta</span>
+            </div>
+            <div class="channel-card">
+                <div class="channel-icon">📲</div>
+                <h4>Mobile App</h4>
+                <p>Native iOS and Android apps with push notifications, biometric login, and seamless UX — coming soon.</p>
+                <span class="channel-badge badge-soon">Coming Soon</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TECHNOLOGY ===== -->
+<section id="technology" class="section">
+    <div class="container">
+        <h2 class="section-title">Enterprise-Grade Technology</h2>
+        <p class="section-subtitle">Built on cloud-native microservices architecture designed for scale, security, and reliability.</p>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-emoji">☕</div>
+                <h4>Spring Boot</h4>
+                <p>Java 17 Microservices</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">⚛️</div>
+                <h4>React + TypeScript</h4>
+                <p>Modern Frontend (Vite)</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">🏦</div>
+                <h4>Apache Fineract</h4>
+                <p>Core Banking Engine</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">☁️</div>
+                <h4>Azure Cloud</h4>
+                <p>AKS, SQL, Redis, Service Bus</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">🐳</div>
+                <h4>Docker & Kubernetes</h4>
+                <p>Container Orchestration</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">🔄</div>
+                <h4>GitOps / ArgoCD</h4>
+                <p>Continuous Deployment</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">💳</div>
+                <h4>Paystack & Remita</h4>
+                <p>Payment Infrastructure</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-emoji">📡</div>
+                <h4>Africa's Talking</h4>
+                <p>USSD & SMS Gateway</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ARCHITECTURE DIAGRAM (TEXT) ===== -->
+<section class="section" style="background:var(--dark);color:var(--white);padding:60px 0;">
+    <div class="container">
+        <h2 class="section-title" style="color:var(--white);">System Architecture</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,.6)">6 independent microservices with event-driven async communication</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:720px;margin:0 auto;">
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">📱</div>
+                <strong style="font-size:.85rem;">USSD Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">Session & Menu Flow</p>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">👤</div>
+                <strong style="font-size:.85rem;">User Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">Registration & KYC</p>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">📄</div>
+                <strong style="font-size:.85rem;">Loan Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">Lifecycle & Fineract</p>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">📊</div>
+                <strong style="font-size:.85rem;">Credit Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">Scoring & Eligibility</p>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">💳</div>
+                <strong style="font-size:.85rem;">Payment Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">Paystack & Remita</p>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:20px;text-align:center;">
+                <div style="font-size:1.6rem;margin-bottom:8px;">🔔</div>
+                <strong style="font-size:.85rem;">Notification Service</strong>
+                <p style="font-size:.75rem;opacity:.6;margin-top:4px;">SMS & Email</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MARKET OPPORTUNITY ===== -->
+<section id="market" class="section market">
+    <div class="container">
+        <div class="market-grid">
+            <div class="market-content">
+                <h3>Massive Market<br>Opportunity</h3>
+                <p>
+                    Nigeria's digital lending market is growing at 20%+ CAGR. Salary advance loans remain underserved,
+                    with banks focusing only on existing customers. TooTriv is positioned to capture this gap with
+                    lower rates, faster disbursement, and multi-channel access.
+                </p>
+                <p>
+                    Our initial target is 2 million urban salaried workers, with expansion plans across West Africa
+                    and the broader African continent.
+                </p>
+            </div>
+            <div class="market-stats">
+                <div class="market-stat">
+                    <div class="market-stat-icon">🌍</div>
+                    <div>
+                        <h4>60M+</h4>
+                        <p>Working population in Nigeria</p>
+                    </div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-icon">💼</div>
+                    <div>
+                        <h4>15M</h4>
+                        <p>Salaried employees with banked income</p>
+                    </div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-icon">🎯</div>
+                    <div>
+                        <h4>2M</h4>
+                        <p>Initial addressable market (urban centers)</p>
+                    </div>
+                </div>
+                <div class="market-stat">
+                    <div class="market-stat-icon">📈</div>
+                    <div>
+                        <h4>25-30%</h4>
+                        <p>Projected net margin per loan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPETITIVE ADVANTAGE ===== -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Competitive Advantage</h2>
+        <p class="section-subtitle">TooTriv offers the best combination of low rates, fast disbursement, and multi-channel access.</p>
+        <div style="overflow-x:auto;">
+            <table class="competitive-table">
+                <thead>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Interest Rate</th>
+                        <th>Max Loan</th>
+                        <th>Tenor</th>
+                        <th>Differentiator</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Access PayDay Extra</td>
+                        <td>11%/month</td>
+                        <td>₦2M</td>
+                        <td>90 days</td>
+                        <td>Bank-backed</td>
+                    </tr>
+                    <tr>
+                        <td>FairMoney</td>
+                        <td>10-30%/month</td>
+                        <td>₦500k</td>
+                        <td>15-60 days</td>
+                        <td>Mobile-only lender</td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td>15-25%/month</td>
+                        <td>₦200k</td>
+                        <td>30-60 days</td>
+                        <td>No collateral</td>
+                    </tr>
+                    <tr>
+                        <td>Carbon</td>
+                        <td>5-30%/month</td>
+                        <td>₦1M</td>
+                        <td>90 days</td>
+                        <td>Flexible digital</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>🟢 TooTriv</td>
+                        <td>7-10%/month</td>
+                        <td>₦100k</td>
+                        <td>15-90 days</td>
+                        <td>Employer partnerships, USSD, fastest approval</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="contact" class="cta-section">
+    <h2>Ready to Transform Salary Lending in Africa?</h2>
+    <p>We're seeking cloud credits, strategic partners, and investors to scale TooTriv across Nigeria and beyond.</p>
+    <div class="cta-buttons">
+        <a href="mailto:hello@tootriv.com" class="btn btn-primary">Get In Touch</a>
+        <a href="#features" class="btn btn-outline">Learn More</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Too<span>Triv</span></div>
+                <p>
+                    TooTriv Financial Services is building the future of salary-backed lending in Africa —
+                    fast, affordable, and accessible to every worker.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="#channels">Channels</a>
+                <a href="#technology">Technology</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#market">Market</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="mailto:hello@tootriv.com">hello@tootriv.com</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter / X</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 TooTriv Financial Services. All rights reserved. | Lagos, Nigeria
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
