@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A8754"/>
+      <stop offset="100%" stop-color="#065F3B"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+
+  <!-- Subtle pattern circles -->
+  <circle cx="1400" cy="-50" r="300" fill="rgba(247,179,43,.08)"/>
+  <circle cx="200" cy="450" r="250" fill="rgba(255,255,255,.04)"/>
+  <circle cx="1100" cy="350" r="180" fill="rgba(247,179,43,.05)"/>
+
+  <!-- Decorative dots -->
+  <circle cx="100" cy="60" r="4" fill="rgba(255,255,255,.15)"/>
+  <circle cx="160" cy="40" r="3" fill="rgba(247,179,43,.25)"/>
+  <circle cx="1480" cy="340" r="5" fill="rgba(255,255,255,.12)"/>
+  <circle cx="1420" cy="360" r="3" fill="rgba(247,179,43,.2)"/>
+
+  <!-- TT Logo Mark -->
+  <g transform="translate(180, 118)">
+    <rect x="0" y="0" width="120" height="20" rx="5" ry="5" fill="white" opacity=".95"/>
+    <rect x="22" y="0" width="20" height="90" rx="5" ry="5" fill="white" opacity=".95"/>
+    <rect x="78" y="0" width="20" height="90" rx="5" ry="5" fill="white" opacity=".95"/>
+    <circle cx="60" cy="68" r="7" fill="#F7B32B"/>
+  </g>
+
+  <!-- Company Name -->
+  <text x="330" y="185" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="800" fill="white" letter-spacing="-1">
+    Too<tspan fill="#F7B32B">Triv</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="335" y="225" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="500" fill="rgba(255,255,255,.85)">
+    Instant Salary Advances for Every Nigerian Worker
+  </text>
+
+  <!-- Separator line -->
+  <rect x="335" y="242" width="60" height="3" rx="2" fill="#F7B32B"/>
+
+  <!-- Sub-info -->
+  <text x="335" y="272" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="400" fill="rgba(255,255,255,.6)">
+    USSD · Web · Mobile  |  Fast · Affordable · Inclusive
+  </text>
+
+  <!-- Right side illustration — growing plant from coin -->
+  <g transform="translate(1150, 80)">
+    <!-- Coin stack -->
+    <ellipse cx="120" cy="270" rx="55" ry="18" fill="#F7B32B" opacity=".2"/>
+    <ellipse cx="120" cy="260" rx="48" ry="16" fill="#F7B32B" opacity=".35"/>
+    <ellipse cx="120" cy="250" rx="42" ry="14" fill="#F7B32B" opacity=".6"/>
+    <text x="120" y="257" text-anchor="middle" fill="#865A10" font-size="18" font-weight="800" font-family="Inter,sans-serif">₦</text>
+
+    <!-- Stem -->
+    <path d="M120 242 Q120 170 115 120" stroke="rgba(255,255,255,.7)" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Leaves -->
+    <path d="M115 180 Q85 155 72 125 Q100 140 115 170" fill="#2ECC71" opacity=".7"/>
+    <path d="M117 150 Q148 120 165 90 Q145 115 117 142" fill="#2ECC71" opacity=".6"/>
+    <path d="M115 120 Q105 90 92 70 Q108 85 115 112" fill="rgba(255,255,255,.4)"/>
+
+    <!-- Sparkles -->
+    <circle cx="65" cy="110" r="4" fill="#F7B32B" opacity=".5"/>
+    <circle cx="175" cy="80" r="3" fill="#F7B32B" opacity=".4"/>
+    <circle cx="85" cy="75" r="2.5" fill="rgba(255,255,255,.4)"/>
+
+    <!-- Upward arrows -->
+    <path d="M55 95 L55 65 M48 75 L55 65 L62 75" stroke="#2ECC71" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".4"/>
+    <path d="M185 110 L185 85 M178 95 L185 85 L192 95" stroke="#2ECC71" stroke-width="2" fill="none" stroke-linecap="round" opacity=".3"/>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="388" width="1584" height="8" fill="#F7B32B" opacity=".8"/>
+</svg>
