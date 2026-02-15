@@ -88,11 +88,16 @@
             height: 64px;
         }
         .logo {
+            display: flex; align-items: center; gap: 8px;
             font-size: 1.5rem; font-weight: 800;
             color: var(--primary);
             letter-spacing: -0.5px;
         }
         .logo span { color: var(--accent); }
+        .logo-mark {
+            width: 36px; height: 36px;
+            flex-shrink: 0;
+        }
         .nav-links { display: flex; gap: 32px; align-items: center; }
         .nav-links a { font-size: .9rem; font-weight: 500; color: var(--dark); transition: color .2s; }
         .nav-links a:hover { color: var(--primary); }
@@ -407,6 +412,7 @@
         }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
         .footer-brand .logo { font-size: 1.6rem; }
+        .footer-brand .logo-mark { width: 40px; height: 40px; }
         .footer-brand p { font-size: .88rem; margin-top: 12px; line-height: 1.7; max-width: 300px; }
         .footer-col h4 { color: var(--white); font-size: .9rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
         .footer-col a { display: block; font-size: .88rem; margin-bottom: 10px; transition: color .2s; }
@@ -456,7 +462,16 @@
 <!-- ===== NAVBAR ===== -->
 <nav>
     <div class="nav-inner">
-        <div class="logo">Too<span>Triv</span></div>
+        <div class="logo">
+                <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs><linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A8754"/><stop offset="100%" stop-color="#065F3B"/></linearGradient></defs>
+                    <rect x="16" y="40" width="168" height="28" rx="8" ry="8" fill="url(#navGrad)"/>
+                    <rect x="48" y="40" width="28" height="124" rx="8" ry="8" fill="url(#navGrad)"/>
+                    <rect x="124" y="40" width="28" height="124" rx="8" ry="8" fill="url(#navGrad)"/>
+                    <circle cx="100" cy="130" r="10" fill="#F7B32B"/>
+                </svg>
+                Too<span>Triv</span>
+            </div>
         <div class="nav-links">
             <a href="#problem">Problem</a>
             <a href="#how-it-works">How It Works</a>
@@ -486,7 +501,34 @@
                 <a href="#contact" class="btn btn-outline">Partner With Us</a>
             </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" style="position:relative;">
+            <!-- Thrive illustration -->
+            <svg class="thrive-illustration" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:-60px;right:-40px;width:160px;opacity:.92;z-index:2;filter:drop-shadow(0 4px 12px rgba(0,0,0,.15));">
+              <!-- Coin base -->
+              <ellipse cx="120" cy="170" rx="50" ry="18" fill="#F7B32B" opacity=".25"/>
+              <ellipse cx="120" cy="162" rx="44" ry="16" fill="#F7B32B" opacity=".4"/>
+              <ellipse cx="120" cy="155" rx="38" ry="14" fill="#F7B32B"/>
+              <text x="120" y="161" text-anchor="middle" fill="#865A10" font-size="16" font-weight="800" font-family="Inter,sans-serif">₦</text>
+              <!-- Stem -->
+              <path d="M120 148 Q120 100 115 75" stroke="#0A8754" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <!-- Left leaf -->
+              <path d="M115 105 Q90 85 80 60 Q105 70 115 95" fill="#0A8754" opacity=".85"/>
+              <path d="M115 100 Q98 82 88 65" stroke="#065F3B" stroke-width="1" fill="none" opacity=".5"/>
+              <!-- Right leaf -->
+              <path d="M117 85 Q142 62 155 40 Q135 55 117 78" fill="#0A8754" opacity=".9"/>
+              <path d="M117 80 Q136 60 148 46" stroke="#065F3B" stroke-width="1" fill="none" opacity=".5"/>
+              <!-- Top leaf (new growth) -->
+              <path d="M115 75 Q108 52 95 35 Q112 45 115 68" fill="#2ECC71" opacity=".85"/>
+              <path d="M115 72 Q118 48 130 30 Q120 45 116 65" fill="#2ECC71" opacity=".7"/>
+              <!-- Sparkles -->
+              <circle cx="75" cy="50" r="3" fill="#F7B32B" opacity=".7"/>
+              <circle cx="160" cy="35" r="2.5" fill="#F7B32B" opacity=".6"/>
+              <circle cx="145" cy="65" r="2" fill="#F7B32B" opacity=".5"/>
+              <circle cx="90" cy="38" r="2" fill="#F7B32B" opacity=".5"/>
+              <!-- Upward arrows (growth energy) -->
+              <path d="M65 45 L65 25 M60 32 L65 25 L70 32" stroke="#2ECC71" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+              <path d="M170 55 L170 38 M165 44 L170 38 L175 44" stroke="#2ECC71" stroke-width="2" fill="none" stroke-linecap="round" opacity=".4"/>
+            </svg>
             <div class="phone-mockup">
                 <div class="phone-screen">
                     <div class="phone-header">
@@ -884,6 +926,14 @@
 
 <!-- ===== CTA ===== -->
 <section id="contact" class="cta-section">
+    <!-- Thrive icon -->
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:64px;margin:0 auto 20px;display:block;opacity:.9;">
+      <circle cx="40" cy="40" r="38" fill="rgba(255,255,255,.12)"/>
+      <path d="M40 58 Q40 35 37 25" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M37 40 Q25 30 20 18 Q32 25 37 36" fill="#2ECC71" opacity=".9"/>
+      <path d="M38 30 Q50 18 58 10 Q50 22 39 28" fill="#2ECC71" opacity=".8"/>
+      <path d="M37 25 Q32 14 28 8 Q35 14 37 22" fill="#F7B32B" opacity=".8"/>
+    </svg>
     <h2>Ready to Transform Salary Lending in Africa?</h2>
     <p>We're seeking cloud credits, strategic partners, and investors to scale TooTriv across Nigeria and beyond.</p>
     <div class="cta-buttons">
@@ -897,7 +947,16 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">Too<span>Triv</span></div>
+                <div class="logo">
+                    <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs><linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A8754"/><stop offset="100%" stop-color="#065F3B"/></linearGradient></defs>
+                        <rect x="16" y="40" width="168" height="28" rx="8" ry="8" fill="url(#footGrad)"/>
+                        <rect x="48" y="40" width="28" height="124" rx="8" ry="8" fill="url(#footGrad)"/>
+                        <rect x="124" y="40" width="28" height="124" rx="8" ry="8" fill="url(#footGrad)"/>
+                        <circle cx="100" cy="130" r="10" fill="#F7B32B"/>
+                    </svg>
+                    Too<span>Triv</span>
+                </div>
                 <p>
                     TooTriv Financial Services is building the future of salary-backed lending in Africa —
                     fast, affordable, and accessible to every worker.
