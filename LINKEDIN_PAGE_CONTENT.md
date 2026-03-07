@@ -2,7 +2,7 @@
 
 ## Company Details
 
-- **Company Name:** TooTriv Financial Services
+- **Company Name:** TooTriv Finance Limited
 - **LinkedIn URL:** linkedin.com/company/tootriv (claim this)
 - **Industry:** Financial Services
 - **Company Size:** 2-10 employees
@@ -24,7 +24,7 @@ Instant, affordable salary advances for every Nigerian worker — via USSD, Web 
 ## About Section
 
 ```
-TooTriv Financial Services is a digital lending platform providing fast, affordable, and collateral-free salary-backed loans to Nigerian salaried employees.
+TooTriv Finance Limited is a digital lending platform providing fast, affordable, and collateral-free salary-backed loans to Nigerian salaried employees.
 
 We're solving a real problem: millions of workers in Nigeria live paycheck to paycheck. When emergencies strike — medical bills, school fees, family needs — they're forced to turn to predatory lenders charging 15-30% monthly interest, or slow bank processes that take weeks.
 
@@ -102,7 +102,7 @@ The banner features:
 ### Post 1: Introduction
 
 ```
-🚀 Introducing TooTriv Financial Services
+🚀 Introducing TooTriv Finance Limited
 
 We're building the future of salary-backed lending in Nigeria.
 
