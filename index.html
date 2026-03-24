@@ -395,6 +395,96 @@
         .badge-beta { background: #FEF3C7; color: #92400E; }
         .badge-soon { background: #E0E7FF; color: #3730A3; }
 
+        /* ===== VISION / MISSION / VALUES ===== */
+        .vmv { background: var(--white); }
+        .vmv-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 56px;
+        }
+        .vmv-box {
+            background: var(--light-gray);
+            border-radius: 14px;
+            padding: 36px 32px;
+            border-left: 5px solid var(--primary);
+        }
+        .vmv-box h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+        .vmv-box p {
+            font-size: 1.05rem;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+        .values-heading {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .values-heading h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+        .values-acronym {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: .95rem;
+            color: var(--gray);
+        }
+        .values-acronym span {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin: 0 6px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .value-card {
+            background: var(--light-gray);
+            border-radius: 14px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+        .value-letter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--gradient);
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .value-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        .value-card p {
+            font-size: .88rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
         /* ===== CTA ===== */
         .cta-section {
             background: var(--gradient);
@@ -439,6 +529,8 @@
             .tech-grid { grid-template-columns: repeat(2, 1fr); }
             .market-grid { grid-template-columns: 1fr; }
             .channels-grid { grid-template-columns: 1fr; }
+            .vmv-intro { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 600px) {
@@ -450,6 +542,7 @@
             .steps-grid { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
             .tech-grid { grid-template-columns: 1fr 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
             .competitive-table { font-size: .78rem; }
             .footer-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
@@ -474,6 +567,7 @@
                 Too<span>Triv</span>
             </div>
         <div class="nav-links">
+            <a href="#about">About</a>
             <a href="#problem">Problem</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#features">Features</a>
@@ -584,6 +678,55 @@
             <div>
                 <div class="stat-number">20%+</div>
                 <div class="stat-label">Market CAGR Growth</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VISION / MISSION / VALUES ===== -->
+<section id="about" class="section vmv">
+    <div class="container">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle">Starting from Nigeria, built for Africa and beyond.</p>
+
+        <div class="vmv-intro">
+            <div class="vmv-box">
+                <h3>Vision</h3>
+                <p>To build a world where every working person has the financial power to thrive, not just survive.</p>
+            </div>
+            <div class="vmv-box">
+                <h3>Mission</h3>
+                <p>To simplify access to fair, fast credit and smart financial tools that help working people handle income gaps, seize opportunities, and build lasting financial stability.</p>
+            </div>
+        </div>
+
+        <div class="values-heading">
+            <h3>Our Core Values</h3>
+        </div>
+        <div class="values-acronym">
+            <span>S</span>implicity &bull; <span>T</span>rust &bull; <span>A</span>ccessibility &bull; <span>R</span>esponsibility
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-letter">S</div>
+                <h4>Simplicity</h4>
+                <p>If it feels complicated, we are not done yet. We design every product and experience to be clear, easy to use, and stress free.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-letter">T</div>
+                <h4>Trust</h4>
+                <p>We earn trust by being transparent and consistent. Clear pricing, no hidden fees, honest communication, and keeping our word every time.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-letter">A</div>
+                <h4>Accessibility</h4>
+                <p>Financial tools should be for everyone. We build for real people in real situations, across devices and channels, so access is inclusive and practical.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-letter">R</div>
+                <h4>Responsibility</h4>
+                <p>We lend responsibly. We do not push credit people cannot repay, and we measure success by improved outcomes, not just how much we disburse.</p>
             </div>
         </div>
     </div>
