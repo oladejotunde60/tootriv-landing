@@ -32,8 +32,8 @@ TooTriv changes this.
 
 🚀 What We Offer:
 • Salary advances up to ₦100,000 disbursed in under 5 minutes
-• Interest rates of 7-10% per month — significantly below market average
-• Multi-channel access: USSD (no internet needed), Web App, and Mobile App
+• Interest rates of 7-10% per month
+• Multi-channel access: USSD (Coming soon), Web App, and Mobile App
 • AI-powered credit scoring using salary history, BVN verification, and employer data
 • Automatic repayment via salary deduction — no manual payments
 
