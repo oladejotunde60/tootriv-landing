@@ -157,6 +157,7 @@
             max-width: 1140px; margin: 0 auto;
             display: flex; align-items: center; justify-content: space-between;
             height: 64px;
+            position: relative;
         }
         .logo {
             display: flex; align-items: center; gap: 8px;
@@ -707,7 +708,30 @@
             .values-grid { grid-template-columns: 1fr; }
             .competitive-table { font-size: .78rem; }
             .footer-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                padding: 12px;
+                background: var(--white);
+                border: 1px solid rgba(0,0,0,.08);
+                border-radius: 14px;
+                box-shadow: 0 16px 40px rgba(0,0,0,.12);
+            }
+            .nav-links.mobile-open { display: flex; }
+            .nav-links a {
+                padding: 12px 14px;
+                border-radius: 10px;
+            }
+            .nav-links .nav-cta {
+                text-align: center;
+                margin-top: 6px;
+            }
             .hamburger { display: block; }
             .phone-mockup { width: 240px; }
         }
@@ -737,7 +761,7 @@
             <a href="#market">Market</a>
             <a href="#contact" class="nav-cta">Contact Us</a>
         </div>
-        <button class="hamburger" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex';" aria-label="Menu">
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open'); this.setAttribute('aria-expanded', document.querySelector('.nav-links').classList.contains('mobile-open'));" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -1057,8 +1081,8 @@
             </div>
             <div class="tech-card">
                 <div class="tech-emoji">☁️</div>
-                <h4>Azure Cloud</h4>
-                <p>AKS, SQL, Redis, Service Bus</p>
+                <h4>Cloud Infrastructure</h4>
+                <p>Containers, databases, caching, and messaging</p>
             </div>
             <div class="tech-card">
                 <div class="tech-emoji">🐳</div>
@@ -1247,7 +1271,7 @@
                 <p>Leading TooTriv's vision with deep fintech infrastructure, platform reliability, and cloud engineering experience across high-growth financial services.</p>
                 <ul class="team-highlights">
                     <li>Senior SRE Infrastructure Manager at FairMoney, previously Site Reliability Engineer at Moniepoint and Access Bank.</li>
-                    <li>Led large-scale migrations to Linux and AKS, GitOps delivery with Terraform, ArgoCD, and Helm, and major Azure SQL cost and resilience improvements.</li>
+                    <li>Led large-scale migrations to Linux and Kubernetes, GitOps delivery with Terraform, ArgoCD, and Helm, and major database cost and resilience improvements.</li>
                     <li>Brings hands-on experience in incident response, zero-downtime upgrades, observability, networking, and secure infrastructure for high-growth financial systems.</li>
                 </ul>
                 <div class="team-social">
@@ -1300,7 +1324,7 @@
                     🇳🇬 Nigerian-founded &amp; operated
                 </div>
                 <div style="background:var(--primary-light);border-radius:10px;padding:14px 24px;font-size:.88rem;font-weight:600;color:var(--primary-dark);">
-                    ☁️ Cloud-native — Azure AKS &amp; Kubernetes
+                    ☁️ Cloud-native platform built for scale
                 </div>
                 <div style="background:var(--primary-light);border-radius:10px;padding:14px 24px;font-size:.88rem;font-weight:600;color:var(--primary-dark);">
                     🔒 Bank-grade security &amp; encryption
