@@ -587,6 +587,12 @@
             font-size: 2.2rem; font-weight: 800;
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 16px;
+            overflow: hidden;
+        }
+        .team-avatar img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
         .team-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
         .team-card .team-title { font-size: .9rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
@@ -1215,7 +1221,7 @@
         <p class="section-subtitle">TooTriv is led by experienced operators passionate about financial inclusion in Africa.</p>
         <div class="team-grid">
             <div class="team-card">
-                <div class="team-avatar">TO</div>
+                <div class="team-avatar"><img src="tunde-oladejo.png" alt="Tunde Oladejo - Founder & CEO of TooTriv" loading="lazy"></div>
                 <h4>Tunde Oladejo</h4>
                 <div class="team-title">Founder &amp; CEO</div>
                 <p>Leading TooTriv's vision to make salary-backed credit accessible to every Nigerian worker through technology and employer partnerships.</p>
@@ -1224,7 +1230,7 @@
                 </div>
             </div>
             <div class="team-card">
-                <div class="team-avatar">RI</div>
+                <div class="team-avatar"><img src="raji-ibrahim.jpeg" alt="Raji Ibrahim - Co-Founder & CTO of TooTriv" loading="lazy"></div>
                 <h4>Raji Ibrahim</h4>
                 <div class="team-title">Co-Founder &amp; CTO</div>
                 <p>Architecting TooTriv's cloud-native microservices platform on Azure, ensuring enterprise-grade security, scalability, and reliability.</p>
