@@ -597,6 +597,15 @@
         .team-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
         .team-card .team-title { font-size: .9rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
         .team-card p { font-size: .88rem; color: var(--gray); line-height: 1.6; }
+        .team-highlights {
+            margin: 14px 0 0;
+            padding-left: 18px;
+            text-align: left;
+            color: var(--gray);
+            font-size: .86rem;
+            line-height: 1.6;
+        }
+        .team-highlights li + li { margin-top: 6px; }
         .team-social {
             margin-top: 12px;
             display: flex; justify-content: center; gap: 12px;
@@ -1218,13 +1227,18 @@
 <section id="team" class="section" style="background:var(--light-gray);">
     <div class="container">
         <h2 class="section-title">Leadership Team</h2>
-        <p class="section-subtitle">TooTriv is led by experienced operators passionate about financial inclusion in Africa.</p>
+        <p class="section-subtitle">TooTriv is led by founders with hands-on fintech, banking, payments, and cloud infrastructure experience across FairMoney, Moniepoint, Access Bank, and Standard Bank.</p>
         <div class="team-grid">
             <div class="team-card">
                 <div class="team-avatar"><img src="tunde-oladejo.png" alt="Tunde Oladejo - Founder & CEO of TooTriv" loading="lazy"></div>
                 <h4>Tunde Oladejo</h4>
                 <div class="team-title">Founder &amp; CEO</div>
-                <p>Leading TooTriv's vision to make salary-backed credit accessible to every Nigerian worker through technology and employer partnerships.</p>
+                <p>Leading TooTriv's vision with banking operations and customer-channel experience across card, ATM, and digital financial services.</p>
+                <ul class="team-highlights">
+                    <li>Doctoral student at the University of Southern California, combining research depth with practical operating experience.</li>
+                    <li>Former engineering and support roles at Standard Bank and Access Bank across transaction systems, ATM platforms, and service operations.</li>
+                    <li>Focuses on product strategy, customer trust, employer partnerships, and building financial tools that work for everyday Nigerian workers.</li>
+                </ul>
                 <div class="team-social">
                     <a href="https://www.linkedin.com/in/tunde-oladejo-90a3607a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
                 </div>
@@ -1233,7 +1247,12 @@
                 <div class="team-avatar"><img src="raji-ibrahim.jpeg" alt="Raji Ibrahim - Co-Founder & CTO of TooTriv" loading="lazy"></div>
                 <h4>Raji Ibrahim</h4>
                 <div class="team-title">Co-Founder &amp; CTO</div>
-                <p>Architecting TooTriv's cloud-native microservices platform on Azure, ensuring enterprise-grade security, scalability, and reliability.</p>
+                <p>Architecting TooTriv's cloud-native platform with deep production experience in fintech reliability, platform engineering, and Azure-scale infrastructure.</p>
+                <ul class="team-highlights">
+                    <li>Senior SRE Infrastructure Manager at FairMoney, previously Site Reliability Engineer at Moniepoint and Access Bank.</li>
+                    <li>Led large-scale migrations to Linux and AKS, GitOps delivery with Terraform, ArgoCD, and Helm, and major Azure SQL cost and resilience improvements.</li>
+                    <li>Brings hands-on experience in incident response, zero-downtime upgrades, observability, networking, and secure infrastructure for high-growth financial systems.</li>
+                </ul>
                 <div class="team-social">
                     <a href="https://www.linkedin.com/in/raji-ibrahim-page/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
                 </div>
