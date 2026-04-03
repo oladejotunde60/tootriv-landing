@@ -4,7 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TooTriv Finance Limited — Salary Advance for Every Nigerian Worker</title>
-    <meta name="description" content="TooTriv offers instant, affordable salary-backed loans to Nigerian salaried employees via USSD, Web, and Mobile. Get up to ₦100,000 in under 5 minutes.">
+    <meta name="description" content="TooTriv Finance Limited (RC 9392905) is a Nigerian fintech startup building instant, affordable salary-backed loans for salaried employees via USSD, Web, and Mobile. Founded in 2025 and headquartered in Lagos, Nigeria.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tootriv.com/">
+    <meta property="og:title" content="TooTriv Finance Limited — Salary Advance for Every Nigerian Worker">
+    <meta property="og:description" content="TooTriv is a Nigerian fintech startup providing instant, affordable, collateral-free salary-backed loans to salaried employees via USSD, Web, and Mobile. Up to ₦100,000 in under 5 minutes.">
+    <meta property="og:site_name" content="TooTriv Finance Limited">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TooTrivHQ">
+    <meta name="twitter:title" content="TooTriv Finance Limited — Salary Advance for Every Nigerian Worker">
+    <meta name="twitter:description" content="Instant, affordable salary-backed loans for Nigerian workers. USSD, Web, and Mobile. Up to ₦100,000 in under 5 minutes.">
+    <link rel="canonical" href="https://tootriv.com/">
+
+    <!-- Structured Data for Google Verification -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "TooTriv Finance Limited",
+      "alternateName": "TooTriv",
+      "url": "https://tootriv.com",
+      "description": "TooTriv Finance Limited is a Nigerian fintech startup providing instant, affordable, collateral-free salary-backed loans to salaried employees via USSD, Web, and Mobile.",
+      "foundingDate": "2025",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Tunde Oladejo",
+          "jobTitle": "Founder & CEO",
+          "sameAs": "https://www.linkedin.com/in/tunde-oladejo-90a3607a/"
+        },
+        {
+          "@type": "Person",
+          "name": "Raji Ibrahim",
+          "jobTitle": "Co-Founder & CTO",
+          "sameAs": "https://www.linkedin.com/in/raji-ibrahim-page/"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Ibidapo Shobowale Street, Shofunwa Estate",
+        "addressLocality": "Ikorodu",
+        "addressRegion": "Lagos",
+        "addressCountry": "NG"
+      },
+      "email": "hello@tootriv.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/tootriv-finance-limited",
+        "https://x.com/TooTrivHQ",
+        "https://www.instagram.com/tootrivfinance/",
+        "https://www.facebook.com/profile.php?id=61578451269544"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nigeria"
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 2,
+        "maxValue": 10
+      },
+      "legalName": "TooTriv Finance Limited",
+      "taxID": "RC 9392905"
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230A8754'/%3E%3Cstop offset='100%25' stop-color='%23065F3B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='16' y='40' width='168' height='28' rx='8' ry='8' fill='url(%23g)'/%3E%3Crect x='48' y='40' width='28' height='124' rx='8' ry='8' fill='url(%23g)'/%3E%3Crect x='124' y='40' width='28' height='124' rx='8' ry='8' fill='url(%23g)'/%3E%3Ccircle cx='100' cy='130' r='10' fill='%23F7B32B'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,13 +139,11 @@
             border: 2px solid var(--white);
         }
         .btn-outline:hover { background: rgba(255,255,255,.15); }
-        .btn-disabled {
-            background: #d1d5db;
-            color: #6b7280;
-            cursor: not-allowed;
-            opacity: 0.6;
+        .btn-green {
+            background: var(--primary);
+            color: var(--white);
         }
-        .btn-disabled:hover { background: #d1d5db; transform: none; box-shadow: none; }
+        .btn-green:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,135,84,.35); }
 
         /* ===== NAV ===== */
         nav {
@@ -498,6 +561,73 @@
             text-align: center;
             padding: 80px 24px;
         }
+
+        /* ===== TEAM / LEADERSHIP ===== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,.06);
+            transition: transform .25s, box-shadow .25s;
+        }
+        .team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.1); }
+        .team-avatar {
+            width: 96px; height: 96px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: var(--white);
+            font-size: 2.2rem; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .team-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+        .team-card .team-title { font-size: .9rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+        .team-card p { font-size: .88rem; color: var(--gray); line-height: 1.6; }
+        .team-social {
+            margin-top: 12px;
+            display: flex; justify-content: center; gap: 12px;
+        }
+        .team-social a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: .85rem;
+            transition: background .2s, color .2s;
+        }
+        .team-social a:hover { background: var(--primary); color: var(--white); }
+
+        /* ===== COMPANY INFO BOX ===== */
+        .company-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .company-info-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,.04);
+        }
+        .company-info-card .info-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .company-info-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: 6px; color: var(--dark); }
+        .company-info-card p { font-size: .88rem; color: var(--gray); line-height: 1.5; }
+        .company-info-card strong { color: var(--primary); }
         .cta-section h2 { font-size: 2.2rem; font-weight: 800; color: var(--white); margin-bottom: 16px; }
         .cta-section p { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
         .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -539,6 +669,8 @@
             .vmv-intro { grid-template-columns: 1fr; }
             .values-grid { grid-template-columns: 1fr 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .company-info-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .section { padding: 56px 0; }
@@ -578,7 +710,7 @@
             <a href="#problem">Problem</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#features">Features</a>
-            <a href="#technology">Technology</a>
+            <a href="#team">Team</a>
             <a href="#market">Market</a>
             <a href="#contact" class="nav-cta">Contact Us</a>
         </div>
@@ -601,7 +733,7 @@
             <div class="hero-buttons">
                 <a href="#how-it-works" class="btn btn-primary">See How It Works</a>
                 <a href="#contact" class="btn btn-outline">Partner With Us</a>
-                <a href="https://web.non-prod.tootriv.com/" class="btn btn-disabled">Get Started</a>
+                <a href="https://web.non-prod.tootriv.com/" class="btn btn-green" target="_blank" rel="noopener noreferrer">Get Started</a>
             </div>
         </div>
         <div class="hero-visual" style="position:relative;">
@@ -1076,6 +1208,72 @@
     </div>
 </section>
 
+<!-- ===== LEADERSHIP TEAM ===== -->
+<section id="team" class="section" style="background:var(--light-gray);">
+    <div class="container">
+        <h2 class="section-title">Leadership Team</h2>
+        <p class="section-subtitle">TooTriv is led by experienced operators passionate about financial inclusion in Africa.</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">TO</div>
+                <h4>Tunde Oladejo</h4>
+                <div class="team-title">Founder &amp; CEO</div>
+                <p>Leading TooTriv's vision to make salary-backed credit accessible to every Nigerian worker through technology and employer partnerships.</p>
+                <div class="team-social">
+                    <a href="https://www.linkedin.com/in/tunde-oladejo-90a3607a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">RI</div>
+                <h4>Raji Ibrahim</h4>
+                <div class="team-title">Co-Founder &amp; CTO</div>
+                <p>Architecting TooTriv's cloud-native microservices platform on Azure, ensuring enterprise-grade security, scalability, and reliability.</p>
+                <div class="team-social">
+                    <a href="https://www.linkedin.com/in/raji-ibrahim-page/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPANY DETAILS ===== -->
+<section id="company" class="section">
+    <div class="container">
+        <h2 class="section-title">Company Details</h2>
+        <p class="section-subtitle">TooTriv Finance Limited is a registered Nigerian company building transparent, accessible financial services.</p>
+        <div class="company-info-grid">
+            <div class="company-info-card">
+                <div class="info-icon">🏛️</div>
+                <h4>Registered Entity</h4>
+                <p><strong>TooTriv Finance Limited</strong><br>CAC Registration: <strong>RC 9392905</strong><br>Federal Republic of Nigeria</p>
+            </div>
+            <div class="company-info-card">
+                <div class="info-icon">📍</div>
+                <h4>Headquarters</h4>
+                <p>2 Ibidapo Shobowale Street,<br>Shofunwa Estate, Ikorodu,<br><strong>Lagos, Nigeria</strong></p>
+            </div>
+            <div class="company-info-card">
+                <div class="info-icon">📅</div>
+                <h4>Founded</h4>
+                <p><strong>2025</strong><br>Pre-revenue stage<br>Self-funded by founders</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <div style="display:inline-flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:center;">
+                <div style="background:var(--primary-light);border-radius:10px;padding:14px 24px;font-size:.88rem;font-weight:600;color:var(--primary-dark);">
+                    🇳🇬 Nigerian-founded &amp; operated
+                </div>
+                <div style="background:var(--primary-light);border-radius:10px;padding:14px 24px;font-size:.88rem;font-weight:600;color:var(--primary-dark);">
+                    ☁️ Cloud-native — Azure AKS &amp; Kubernetes
+                </div>
+                <div style="background:var(--primary-light);border-radius:10px;padding:14px 24px;font-size:.88rem;font-weight:600;color:var(--primary-dark);">
+                    🔒 Bank-grade security &amp; encryption
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section id="contact" class="cta-section">
     <!-- Thrive icon -->
@@ -1110,7 +1308,8 @@
                     Too<span>Triv</span>
                 </div>
                 <p>
-                    TooTriv Finance Limited is building the future of salary-backed lending in Africa —
+                    TooTriv Finance Limited (RC 9392905) is a registered Nigerian fintech company
+                    building the future of salary-backed lending in Africa —
                     fast, affordable, and accessible to every worker.
                 </p>
                 <p style="margin-top:16px;font-size:.85rem;line-height:1.6;display:flex;align-items:flex-start;gap:6px;">
@@ -1148,7 +1347,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 TooTriv Finance Limited. All rights reserved. | <a href="terms-of-service.html" style="color:inherit;text-decoration:underline;">Terms</a> · <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy</a> | 2 Ibidapo Shobowale Street, Shofunwa Estate, Ikorodu, Lagos, Nigeria
+            &copy; 2025-2026 TooTriv Finance Limited (RC 9392905). All rights reserved. | <a href="terms-of-service.html" style="color:inherit;text-decoration:underline;">Terms</a> · <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy</a> | 2 Ibidapo Shobowale Street, Shofunwa Estate, Ikorodu, Lagos, Nigeria
         </div>
     </div>
 </footer>
