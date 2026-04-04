@@ -1886,7 +1886,8 @@ footer .logo span { color: var(--accent); }
 
 /* --- Nav active state --- */
 .nav-links a.active {
-  color: var(--accent);
+  color: var(--dark);
+  font-weight: 700;
 }
 
 /* --- Page responsive --- */
