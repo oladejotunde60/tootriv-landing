@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041c0e"/>
+      <stop offset="50%" stop-color="#0A8754"/>
+      <stop offset="100%" stop-color="#065F3B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="950" cy="315" r="280" fill="#F7B32B" opacity="0.08"/>
+  <text x="80" y="240" fill="white" font-family="Inter,Arial,Helvetica,sans-serif" font-size="56" font-weight="800">TooTriv Finance Limited</text>
+  <text x="80" y="310" fill="rgba(255,255,255,0.85)" font-family="Inter,Arial,Helvetica,sans-serif" font-size="30" font-weight="500">Instant Salary Advances for Every Worker</text>
+  <text x="80" y="380" fill="rgba(255,255,255,0.6)" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22">Fast, affordable, collateral-free salary-backed loans</text>
+  <text x="80" y="420" fill="rgba(255,255,255,0.6)" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22">via USSD, Web, and Mobile — Up to N100,000 in under 5 minutes</text>
+  <text x="80" y="490" fill="#F7B32B" font-family="Inter,Arial,Helvetica,sans-serif" font-size="18" font-weight="600">RC 9392905 — Lagos, Nigeria — tootriv.com</text>
+  <rect x="0" y="600" width="1200" height="30" fill="#F7B32B"/>
+  <text x="600" y="621" fill="#065F3B" font-family="Inter,Arial,Helvetica,sans-serif" font-size="15" font-weight="700" text-anchor="middle">tootriv.com — Built for Nigeria, Built for Africa</text>
+</svg>

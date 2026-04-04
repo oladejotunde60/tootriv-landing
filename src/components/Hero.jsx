@@ -61,12 +61,7 @@ export default function Hero() {
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a href="/contact" className="btn btn-outline">Partner With Us</a>
-            <a
-              href="https://web.non-prod.tootriv.com/"
-              className="btn btn-green"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/contact" className="btn btn-green">
               Get Started
             </a>
           </div>

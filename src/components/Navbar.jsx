@@ -43,14 +43,13 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <a
-            href="https://web.non-prod.tootriv.com/"
+          <Link
+            to="/contact"
             className="nav-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
           >
             Get Started
-          </a>
+          </Link>
         </div>
         {mobileOpen && (
           <div className="nav-overlay" onClick={() => setMobileOpen(false)} />
