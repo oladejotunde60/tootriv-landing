@@ -56,7 +56,6 @@ export default function HowItWorksPage() {
                 <div className="process-step">
                   <div className="process-step-left">
                     <div className="process-num">{s.num}</div>
-                    {i < steps.length - 1 && <div className="process-line" />}
                   </div>
                   <div className="process-step-content">
                     <div className="process-icon">{s.icon}</div>
