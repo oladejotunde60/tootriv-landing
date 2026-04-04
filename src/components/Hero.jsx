@@ -56,11 +56,11 @@ export default function Hero() {
             via USSD, Web, or Mobile.
           </p>
           <div className="hero-buttons">
-            <a href="#how-it-works" className="btn btn-primary">
+            <a href="/how-it-works" className="btn btn-primary">
               <span>See How It Works</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
-            <a href="#contact" className="btn btn-outline">Partner With Us</a>
+            <a href="/contact" className="btn btn-outline">Partner With Us</a>
             <a
               href="https://web.non-prod.tootriv.com/"
               className="btn btn-green"

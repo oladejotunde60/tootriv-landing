@@ -19,10 +19,10 @@ export default function CTA() {
             partners to scale TooTriv across Nigeria and beyond.
           </p>
           <div className="cta-buttons">
-            <a href="mailto:hello@tootriv.com" className="btn btn-primary btn-lg">
+            <a href="/contact" className="btn btn-primary btn-lg">
               Get In Touch
             </a>
-            <a href="#features" className="btn btn-outline">Learn More</a>
+            <a href="/features" className="btn btn-outline">Learn More</a>
           </div>
         </ScrollReveal>
       </div>
