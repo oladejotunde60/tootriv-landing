@@ -30,43 +30,62 @@ export default function Navbar() {
   }, [mobileOpen])
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="nav-inner">
-        <Logo variant="nav" />
-        <div className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          {navLinks.map(({ to, label }) => (
-            <Link
-              key={to}
-              to={to}
-              className={location.pathname === to ? 'active' : ''}
-              onClick={() => setMobileOpen(false)}
-            >
-              {label}
+    <>
+      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+        <div className="nav-inner">
+          <Logo variant="nav" />
+          {/* Desktop nav links — hidden on mobile via CSS */}
+          <div className="nav-links nav-links--desktop">
+            {navLinks.map(({ to, label }) => (
+              <Link
+                key={to}
+                to={to}
+                className={location.pathname === to ? 'active' : ''}
+              >
+                {label}
+              </Link>
+            ))}
+            <Link to="/contact" className="nav-cta">
+              Get Started
             </Link>
-          ))}
+          </div>
+          <button
+            className="hamburger"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+            aria-expanded={mobileOpen}
+          >
+            <span className={mobileOpen ? 'line line--open' : 'line'} />
+            <span className={mobileOpen ? 'line line--open' : 'line'} />
+            <span className={mobileOpen ? 'line line--open' : 'line'} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile drawer + overlay — OUTSIDE nav to avoid backdrop-filter stacking context */}
+      <div
+        className={`nav-overlay ${mobileOpen ? 'overlay-visible' : ''}`}
+        onClick={() => setMobileOpen(false)}
+      />
+      <div className={`nav-drawer ${mobileOpen ? 'drawer-open' : ''}`}>
+        {navLinks.map(({ to, label }) => (
           <Link
-            to="/contact"
-            className="nav-cta"
+            key={to}
+            to={to}
+            className={location.pathname === to ? 'active' : ''}
             onClick={() => setMobileOpen(false)}
           >
-            Get Started
+            {label}
           </Link>
-        </div>
-        <div
-          className={`nav-overlay ${mobileOpen ? 'overlay-visible' : ''}`}
+        ))}
+        <Link
+          to="/contact"
+          className="nav-cta"
           onClick={() => setMobileOpen(false)}
-        />
-        <button
-          className="hamburger"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
-          aria-expanded={mobileOpen}
         >
-          <span className={mobileOpen ? 'line line--open' : 'line'} />
-          <span className={mobileOpen ? 'line line--open' : 'line'} />
-          <span className={mobileOpen ? 'line line--open' : 'line'} />
-        </button>
+          Get Started
+        </Link>
       </div>
-    </nav>
+    </>
   )
 }
