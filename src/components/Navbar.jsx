@@ -4,6 +4,7 @@ import { useScrollPosition } from '../hooks/useAnimations'
 import Logo from './Logo'
 
 const navLinks = [
+  { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/problem', label: 'Problem' },
   { to: '/how-it-works', label: 'How It Works' },
