@@ -8,6 +8,25 @@ export function useInView(options = {}) {
     const el = ref.current
     if (!el) return
 
+    const revealIfNearViewport = () => {
+      const rect = el.getBoundingClientRect()
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight
+
+      if (rect.top < viewportHeight - 40 && rect.bottom > 0) {
+        setIsInView(true)
+        return true
+      }
+
+      return false
+    }
+
+    if (revealIfNearViewport()) return
+
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+      setIsInView(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,11 +34,19 @@ export function useInView(options = {}) {
           observer.unobserve(el)
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -60px 0px', ...options }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px', ...options }
     )
 
+    const fallbackTimer = window.setTimeout(() => {
+      setIsInView(true)
+      observer.disconnect()
+    }, 1200)
+
     observer.observe(el)
-    return () => observer.disconnect()
+    return () => {
+      window.clearTimeout(fallbackTimer)
+      observer.disconnect()
+    }
   }, [])
 
   return [ref, isInView]
