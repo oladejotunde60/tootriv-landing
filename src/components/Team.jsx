@@ -1,0 +1,69 @@
+import ScrollReveal from './ScrollReveal'
+
+const founders = [
+  {
+    name: 'Tunde Oladejo',
+    title: 'Founder & CEO',
+    photo: '/tunde-oladejo.png',
+    bio: "Leading TooTriv's vision with deep fintech infrastructure, platform reliability, and cloud engineering experience across high-growth financial services.",
+    highlights: [
+      'Senior SRE Infrastructure Manager at FairMoney, previously Site Reliability Engineer at Moniepoint and Access Bank.',
+      'Led large-scale migrations to Linux and Kubernetes, GitOps delivery with Terraform, ArgoCD, and Helm, and major database cost and resilience improvements.',
+      'Brings hands-on experience in incident response, zero-downtime upgrades, observability, networking, and secure infrastructure for high-growth financial systems.',
+    ],
+    linkedin: 'https://www.linkedin.com/in/tunde-oladejo-90a3607a/',
+  },
+  {
+    name: 'Raji Ibrahim',
+    title: 'Co-Founder & CTO',
+    photo: '/raji-ibrahim.jpeg',
+    bio: "Architecting TooTriv's platform with banking operations and customer-channel experience across transaction systems and digital financial services.",
+    highlights: [
+      'Doctoral student at the University of Southern California, combining research depth with practical operating experience.',
+      'Former engineering and support roles at Standard Bank and Access Bank across transaction systems, ATM platforms, and service operations.',
+      'Focuses on product strategy, customer trust, employer partnerships, and building financial tools that work for everyday Nigerian workers.',
+    ],
+    linkedin: 'https://www.linkedin.com/in/raji-ibrahim-page/',
+  },
+]
+
+export default function Team() {
+  return (
+    <section id="team" className="section team-section">
+      <div className="container">
+        <ScrollReveal>
+          <h2 className="section-title">Leadership Team</h2>
+          <p className="section-subtitle">
+            TooTriv is led by founders with hands-on fintech, banking, payments, and cloud infrastructure
+            experience across FairMoney, Moniepoint, Access Bank, and Standard Bank.
+          </p>
+        </ScrollReveal>
+
+        <div className="team-grid">
+          {founders.map((f, i) => (
+            <ScrollReveal key={f.name} delay={i * 150}>
+              <div className="team-card">
+                <div className="team-avatar">
+                  <img src={f.photo} alt={`${f.name} - ${f.title} of TooTriv`} loading="lazy" />
+                </div>
+                <h4>{f.name}</h4>
+                <div className="team-title">{f.title}</div>
+                <p>{f.bio}</p>
+                <ul className="team-highlights">
+                  {f.highlights.map((h, j) => (
+                    <li key={j}>{h}</li>
+                  ))}
+                </ul>
+                <div className="team-social">
+                  <a href={f.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

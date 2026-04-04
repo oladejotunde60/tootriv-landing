@@ -2,6 +2,7 @@
   "name": "tootriv-landing-page",
   "compatibility_date": "2026-02-15",
   "assets": {
-    "directory": "./"
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
   }
 }
