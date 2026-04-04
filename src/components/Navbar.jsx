@@ -52,9 +52,10 @@ export default function Navbar() {
             Get Started
           </Link>
         </div>
-        {mobileOpen && (
-          <div className="nav-overlay" onClick={() => setMobileOpen(false)} />
-        )}
+        <div
+          className={`nav-overlay ${mobileOpen ? 'overlay-visible' : ''}`}
+          onClick={() => setMobileOpen(false)}
+        />
         <button
           className="hamburger"
           onClick={() => setMobileOpen(!mobileOpen)}
