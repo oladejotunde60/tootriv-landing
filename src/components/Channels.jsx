@@ -1,9 +1,9 @@
 import ScrollReveal from './ScrollReveal'
 
 const channels = [
-  { icon: '📞', title: 'USSD', desc: 'Dial a short USSD code from any phone — no internet required. Perfect for the 70% of Nigerians without smartphones.', badge: 'Coming Soon', badgeClass: 'badge-soon' },
+  { icon: '📞', title: 'USSD', desc: 'Dial a short USSD code from any phone - no internet required. Perfect for the 70% of Nigerians without smartphones.', badge: 'Coming Soon', badgeClass: 'badge-soon' },
   { icon: '🌐', title: 'Web Application', desc: 'Full-featured responsive web portal built with React. Apply, manage loans, and view repayment schedules online.', badge: 'Beta', badgeClass: 'badge-beta' },
-  { icon: '📲', title: 'Mobile App', desc: 'Native iOS and Android apps with push notifications, biometric login, and seamless UX — coming soon.', badge: 'Coming Soon', badgeClass: 'badge-soon' },
+  { icon: '📲', title: 'Mobile App', desc: 'Native iOS and Android apps with push notifications, biometric login, and seamless UX - coming soon.', badge: 'Coming Soon', badgeClass: 'badge-soon' },
 ]
 
 export default function Channels() {
@@ -12,7 +12,7 @@ export default function Channels() {
       <div className="container">
         <ScrollReveal>
           <h2 className="section-title">Access Channels</h2>
-          <p className="section-subtitle">Financial inclusion means meeting every customer where they are — from feature phones to smartphones.</p>
+          <p className="section-subtitle">Financial inclusion means meeting every customer where they are - from feature phones to smartphones.</p>
         </ScrollReveal>
 
         <div className="channels-grid">

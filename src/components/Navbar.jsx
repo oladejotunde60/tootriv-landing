@@ -34,7 +34,7 @@ export default function Navbar() {
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="nav-inner">
           <Logo variant="nav" />
-          {/* Desktop nav links — hidden on mobile via CSS */}
+          {/* Desktop nav links - hidden on mobile via CSS */}
           <div className="nav-links nav-links--desktop">
             {navLinks.map(({ to, label }) => (
               <Link
@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer + overlay — OUTSIDE nav to avoid backdrop-filter stacking context */}
+      {/* Mobile drawer + overlay - OUTSIDE nav to avoid backdrop-filter stacking context */}
       <div
         className={`nav-overlay ${mobileOpen ? 'overlay-visible' : ''}`}
         onClick={() => setMobileOpen(false)}

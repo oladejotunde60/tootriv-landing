@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="About TooTriv"
-        subtitle="We're building the future of salary-backed lending — starting from Nigeria, built for Africa and beyond."
+        subtitle="We're building the future of salary-backed lending - starting from Nigeria, built for Africa and beyond."
       />
 
       {/* Vision & Mission */}
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <ScrollReveal delay={300}>
               <p>
                 Our platform enables employees to access up to ₦100,000 in under 5 minutes via
-                USSD, Web, or Mobile — with transparent pricing, no hidden fees, and rates
+                USSD, Web, or Mobile - with transparent pricing, no hidden fees, and rates
                 significantly lower than market competitors.
               </p>
             </ScrollReveal>
@@ -76,7 +76,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <ScrollReveal>
-            <h2 className="section-title">Our Core Values — STAR</h2>
+            <h2 className="section-title">Our Core Values - STAR</h2>
             <div className="values-acronym">
               <span>S</span>implicity &bull; <span>T</span>rust &bull; <span>A</span>ccessibility &bull; <span>R</span>esponsibility
             </div>

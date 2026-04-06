@@ -20,7 +20,7 @@ const steps = [
   {
     num: 3,
     title: 'Receive Funds',
-    desc: 'Approved loans are disbursed directly to your bank account in under 5 minutes — 24/7.',
+    desc: 'Approved loans are disbursed directly to your bank account in under 5 minutes - 24/7.',
     detail: 'Once approved, funds are sent via instant bank transfer to your registered account. Available around the clock, including weekends and public holidays.',
     icon: '💰',
   },
@@ -28,7 +28,7 @@ const steps = [
     num: 4,
     title: 'Auto-Repay',
     desc: 'Repayment is deducted automatically from your salary via direct debit mandate on payday.',
-    detail: 'You set up a one-time direct debit mandate. On payday, your repayment is automatically deducted — no manual transfers, no missed payments, no late fees.',
+    detail: 'You set up a one-time direct debit mandate. On payday, your repayment is automatically deducted - no manual transfers, no missed payments, no late fees.',
     icon: '🔄',
   },
 ]
@@ -44,7 +44,7 @@ export default function HowItWorksPage() {
     <>
       <PageHeader
         title="How TooTriv Works"
-        subtitle="Get a salary advance in 4 simple steps — no collateral, no paperwork, no hidden fees."
+        subtitle="Get a salary advance in 4 simple steps - no collateral, no paperwork, no hidden fees."
       />
 
       {/* Steps */}
@@ -105,7 +105,7 @@ export default function HowItWorksPage() {
               { icon: '💼', text: 'Salaried employee at a TooTriv partner company' },
               { icon: '🆔', text: 'Valid Bank Verification Number (BVN)' },
               { icon: '🏦', text: 'Active Nigerian bank account' },
-              { icon: '📱', text: 'Any phone — feature phone or smartphone' },
+              { icon: '📱', text: 'Any phone - feature phone or smartphone' },
             ].map((r, i) => (
               <ScrollReveal key={i} delay={i * 80}>
                 <div className="requirement-card">

@@ -106,10 +106,10 @@ export default function MarketPage() {
 
           <div className="market-opp-grid">
             {[
-              { title: 'SMEs & Mid-Market Employers', desc: 'Companies with 20–500 staff seeking low-cost employee benefit programs. TooTriv handles everything — no HR overhead.' },
+              { title: 'SMEs & Mid-Market Employers', desc: 'Companies with 20–500 staff seeking low-cost employee benefit programs. TooTriv handles everything - no HR overhead.' },
               { title: 'Large Corporates', desc: 'Enterprises with thousands of employees looking for structured salary advance solutions to reduce attrition and financial stress.' },
-              { title: 'Public Sector & Parastatals', desc: 'Government agencies with predictable payroll cycles — ideal for automated repayment via salary deduction.' },
-              { title: 'Gig & Informal Workers', desc: 'Extending reach through USSD and mobile to workers without traditional banking — building credit history from scratch.' },
+              { title: 'Public Sector & Parastatals', desc: 'Government agencies with predictable payroll cycles - ideal for automated repayment via salary deduction.' },
+              { title: 'Gig & Informal Workers', desc: 'Extending reach through USSD and mobile to workers without traditional banking - building credit history from scratch.' },
             ].map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 120}>
                 <div className="market-opp-card">
