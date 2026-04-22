@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Dummy profile picture">
+  <rect width="200" height="200" fill="#E5E7EB"/>
+  <circle cx="100" cy="78" r="34" fill="#9CA3AF"/>
+  <path d="M40 170c7-30 29-48 60-48s53 18 60 48" fill="#9CA3AF"/>
+  <text x="100" y="190" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#374151">R.I.</text>
+</svg>

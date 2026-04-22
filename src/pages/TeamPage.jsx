@@ -17,9 +17,9 @@ const founders = [
     linkedin: 'https://www.linkedin.com/in/tunde-oladejo-90a3607a/',
   },
   {
-    name: 'Raji Ibrahim',
+    name: 'R.I.',
     title: 'Co-Founder & CTO',
-    photo: '/raji-ibrahim.jpeg',
+    photo: '/dummy-profile.svg',
     bio: "Architecting TooTriv's platform with banking operations and customer-channel experience across transaction systems and digital financial services.",
     highlights: [
       'Doctoral student at the University of Southern California, combining research depth with practical operating experience.',
