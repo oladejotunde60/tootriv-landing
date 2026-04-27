@@ -55,7 +55,7 @@ export default function AboutPage() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p>
-                Founded in 2025 by Tunde Oladejo and R.I., TooTriv was born from a simple
+                Founded in 2025 by Tunde Oladejo and Rasheed Isiaq, TooTriv was born from a simple
                 observation: millions of Nigerian workers live paycheck to paycheck, and when
                 emergencies strike, they have nowhere to turn except predatory lenders. We're
                 changing that.

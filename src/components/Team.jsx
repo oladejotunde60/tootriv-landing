@@ -14,13 +14,13 @@ const founders = [
     linkedin: 'https://www.linkedin.com/in/tunde-oladejo-90a3607a/',
   },
   {
-    name: 'R.I.',
+    name: 'Rasheed Isiaq',
     title: 'Co-Founder & CTO',
     photo: '/dummy-profile.svg',
     bio: "Architecting TooTriv's platform with banking operations and customer-channel experience across transaction systems and digital financial services.",
     highlights: [
-      'Doctoral student at the University of Southern California, combining research depth with practical operating experience.',
-      'Former engineering and support roles at Standard Bank and Access Bank across transaction systems, ATM platforms, and service operations.',
+      'Graduate researcher at the University of Southern California, combining academic depth with practical operating experience.',
+      'Prior engineering and support roles across the banking sector, spanning transaction systems, ATM platforms, and service operations.',
       'Focuses on product strategy, customer trust, employer partnerships, and building financial tools that work for everyday Nigerian workers.',
     ],
     linkedin: 'https://www.linkedin.com/in/raji-ibrahim-page/',
@@ -35,7 +35,7 @@ export default function Team() {
           <h2 className="section-title">Leadership Team</h2>
           <p className="section-subtitle">
             TooTriv is led by founders with hands-on fintech, banking, payments, and cloud infrastructure
-            experience across FairMoney, Moniepoint, Access Bank, and Standard Bank.
+            experience across FairMoney, Moniepoint, and the broader banking sector.
           </p>
         </ScrollReveal>
 
